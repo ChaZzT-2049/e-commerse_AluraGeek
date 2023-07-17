@@ -1,0 +1,77 @@
+.rodapie__contacto{
+    background: var(--color-azul-claro-fondo);
+    padding: 2rem 4rem;
+}
+.contacto{
+    display: flex;
+    gap: 7rem;
+}
+.contacto__about{
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+.about__logo{
+    padding-right: .3rem;
+    border-bottom: 10px solid var(--color-azul);
+}
+.about__enlaces{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.enlaces__item{
+    color: var(--color-gris-titulo);
+    font-size: 1rem;
+}
+.enlaces__item a:hover {
+    text-decoration: underline;
+}
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.contacto__title{
+    color: var(--color-gris-titulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.contacto__field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background: var(--color-azul);
+    border-radius: 0 0 5px 5px;
+}
+.field__input__label{
+    font-size: 1rem;
+    padding: .5rem 0 0 .5rem;
+    color: var(--color-fondo);
+    font-weight: 500;
+    cursor: pointer;
+}
+.field__input{
+    padding: 1rem;
+    outline: none;
+    border: 2px solid var(--color-gris-titulo);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+}
+.field__input:focus, .field__textarea:focus{
+    border-color: var(--color-azul);
+}
+.field__input:focus::placeholder, .field__textarea:focus::placeholder{
+    color: var(--color-azul);
+}
+.field__textarea{
+    padding: 1rem;
+    resize: none;
+    outline: none;
+    border: 2px solid var(--color-gris-titulo);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+}

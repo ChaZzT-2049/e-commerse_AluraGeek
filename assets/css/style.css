@@ -6,6 +6,7 @@
    --color-azul-fondo: #D4E4FA;
    --color-azul-hover: #5595E9;
    --color-gris-titulo: #464646;
+   --color-azul-claro-fondo: #EAF2FD;
 }
 
 body {
@@ -27,4 +28,13 @@ a{
 }
 h3, h2 , p, h4{
     margin: 0;
+}
+button{
+    font-family: 'Raleway';
+    font-size: 1rem;
+    cursor: pointer;
+}
+textarea, input{
+    font-family: 'Raleway';
+    font-size: 1rem;
 }

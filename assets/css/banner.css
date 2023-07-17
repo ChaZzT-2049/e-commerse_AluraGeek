@@ -20,6 +20,7 @@
 }
 .btn__azul{
     background: var(--color-azul);
+    color: var(--color-fondo);
     padding: 1rem;
 }
 .btn__azul:hover{

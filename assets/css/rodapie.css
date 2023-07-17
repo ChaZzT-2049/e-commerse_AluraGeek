@@ -1,0 +1,25 @@
+.rodapie{
+    padding: 2rem 4rem;
+    text-align: center;
+}
+.rodapie__titulo{
+    font-size: 1.5rem;
+}
+.titulo__enlace{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.rodapie__fecha{
+    font-style: italic;
+    font-size: 1.3rem;
+}
+.rodapie__compartir{
+    text-align: center;
+}
+.compartir__icon{
+    color: var(--color-de-texto-gris);
+    cursor: pointer;
+}
+.compartir__icon:hover{
+    color: var(--color-azul);
+}

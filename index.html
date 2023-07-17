@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/rodapie-contacto.css">
+    <link rel="stylesheet" href="assets/css/rodapie.css">
 </head>
 <body>
     <header class="menu">
@@ -24,7 +26,7 @@
             </form>
         </div>
         <div class="menu__nav">
-            <a class="btn__azul--outline" href="#">Login</a>
+            <a class="btn__azul--outline" href="./login.html">Login</a>
         </div>
     </header>
     <main>
@@ -168,14 +170,40 @@
                 </div>
             </div>
         </section>
+        <section class="rodapie__contacto">
+            <div class="contacto">
+                <div class="contacto__about">
+                    <img src="assets/images/Logo.png" alt="" class="about__logo">
+                    <ul class="about__enlaces">
+                        <li class="enlaces__item"><a href="#">¿Quienes Somos?</a></li>
+                        <li class="enlaces__item"><a href="#">Política de Privacidad</a></li>
+                        <li class="enlaces__item"><a href="#">Programa de fidelidad</a></li>
+                        <li class="enlaces__item"><a href="#">Nuestras Tiendas</a></li>
+                        <li class="enlaces__item"><a href="#">Quiero ser franquiciado</a></li>
+                        <li class="enlaces__item"><a href="#">Anúnciate Aquí</a></li>
+                    </ul>
+                </div>
+                <form action="#" class="contacto__form">
+                    <legend class="contacto__title">Hable con nosotros</legend>
+                    <div class="contacto__field">
+                        <label for="nombre" class="field__input__label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="field__input" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="contacto__field">
+                        <label for="mensaje" class="field__input__label">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn__azul">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
     </main>
     <footer class="rodapie">
-        <section class="contacto">
-
-        </section>
-        <section class="footer">
-
-        </section>
+        <h1 class="rodapie__titulo">Desarrollado Por: <a href="https://github.com/ChaZzT-2049" class="titulo__enlace">Carlos Eduardo Cortes Fernandez</a></h1>
+        <em class="rodapie__fecha">2023</em>
+        <div class="rodapie__compartir">
+            <i class="material-icons compartir__icon">share</i>
+        </div>
     </footer>
 </body>
 </html>
