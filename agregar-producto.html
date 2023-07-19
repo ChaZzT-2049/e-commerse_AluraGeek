@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek Agregar Producto</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/agregar-producto.css">
+    <link rel="stylesheet" href="assets/css/rodapie-contacto.css">
+    <link rel="stylesheet" href="assets/css/rodapie.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="menu__info">
+            <img class="info__logo" src="assets/images/Logo.png" alt="">
+            <form class="info__buscar">
+                <input class="buscar__input" type="search" placeholder="Buscar Produto">
+                <i class="material-icons buscar__icon">search</i>
+            </form>
+        </div>
+        <div class="menu__nav">
+            <a class="btn__azul--outline" href="./index.html">Principal</a>
+        </div>
+    </header>
+    <main>
+        <section class="agregar">
+            <h1 class="agregar__title">Agregar Nuevo Producto</h1>
+            <form action="#" class="agregar__form">
+                <div class="agregar__files">
+                    <fieldset class="agregar__field__drag">
+                        <label class="agregar__label" for="imgdrag"><i class="material-icons">image</i>Arrastra para agregar una imagen del producto.</label>
+                        <input type="file" class="agregar__img__drag" id="imgdrag">
+                    </fieldset>
+                    <fieldset class="agregar__field__buscar">
+                        <label for="imgbtn" class="agregar__label">O</label>
+                        <Button class="btn__azul--outline agregar__img__btn"><input type="file" id="imgbtn" class="agregar__img__input"></Button>
+                    </fieldset>
+                </div>
+                <fieldset class="agregar__field">
+                    <label for="nombre" class="agregar__label">Nombre</label>
+                    <input type="text" id="nombre" class="agregar__input" placeholder="Escribe el nombre del Producto">
+                </fieldset>
+                <fieldset class="agregar__field">
+                    <label for="precio" class="agregar__label">Precio</label>
+                    <input type="number" id="precio" class="agregar__input" placeholder="Escribe el precio del producto" step="0.01" min="0" required>
+                </fieldset>
+                <fieldset class="agregar__field">
+                    <label for="descripcion" class="agregar__label">Descripción</label>
+                    <textarea id="descripcion" class="agregar__textarea" placeholder="Escribe una descripción del producto"></textarea>
+                </fieldset>
+                <input type="submit" class="btn__azul" value="Agregar Producto">
+            </form>
+        </section>
+        <section class="rodapie__contacto">
+            <div class="contacto">
+                <div class="contacto__about">
+                    <img src="assets/images/Logo.png" alt="" class="about__logo">
+                    <ul class="about__enlaces">
+                        <li class="enlaces__item"><a href="#">¿Quienes Somos?</a></li>
+                        <li class="enlaces__item"><a href="#">Política de Privacidad</a></li>
+                        <li class="enlaces__item"><a href="#">Programa de fidelidad</a></li>
+                        <li class="enlaces__item"><a href="#">Nuestras Tiendas</a></li>
+                        <li class="enlaces__item"><a href="#">Quiero ser franquiciado</a></li>
+                        <li class="enlaces__item"><a href="#">Anúnciate Aquí</a></li>
+                    </ul>
+                </div>
+                <form action="#" class="contacto__form">
+                    <legend class="contacto__title">Hable con nosotros</legend>
+                    <div class="contacto__field">
+                        <label for="nombre" class="field__input__label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="field__input" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="contacto__field">
+                        <label for="mensaje" class="field__input__label">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn__azul">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="rodapie">
+        <h1 class="rodapie__titulo">Desarrollado Por: <a href="https://github.com/ChaZzT-2049" class="titulo__enlace">Carlos Eduardo Cortes Fernandez</a></h1>
+        <em class="rodapie__fecha">2023</em>
+        <div class="rodapie__compartir">
+            <i class="material-icons compartir__icon">share</i>
+        </div>
+    </footer>
+</body>
+</html>

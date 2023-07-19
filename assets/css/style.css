@@ -34,7 +34,14 @@ button{
     font-size: 1rem;
     cursor: pointer;
 }
-textarea, input{
+textarea{
+    font-family: 'Raleway';
+    font-size: 1rem;
+    resize: none;
+    border: none;
+    outline: none;
+}
+input{
     font-family: 'Raleway';
     font-size: 1rem;
 }
