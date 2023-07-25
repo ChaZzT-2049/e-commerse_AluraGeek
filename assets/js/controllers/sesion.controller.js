@@ -25,7 +25,7 @@ cerrarbtn.addEventListener("click", function(){
     localStorage.clear();
     sesionStatus = false
     menu();
-    window.location.href = '../../index.html';
+    window.location.href = './index.html';
 })
 
 export const controlMenu = menu();

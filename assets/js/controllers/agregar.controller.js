@@ -28,7 +28,7 @@ if(sesionStatus && actualUser.admin){
     inputPrecio.addEventListener("blur", function(){evaluarInput(inputPrecio)});
     descripcion.addEventListener("blur", function(){evaluarInput(descripcion)});
 }else{
-    window.location.href = '../../index.html';
+    window.location.href = './index.html';
 }
 
 const getCampos = (dragImg, btnImg, inputNombre, inputPrecio, descripcion) =>{
@@ -141,7 +141,7 @@ const agregarProducto = (campos, valueImg, inputNombre, inputPrecio, descripcion
     };
     if(campos[0] && campos[1] && campos[2] && campos[3]){
         services.addProduct(producto).then(data => {
-            window.location.href = '../../productos.html';
+            window.location.href = './productos.html';
         })
         .catch(error => {
             console.error('Error:', error); 

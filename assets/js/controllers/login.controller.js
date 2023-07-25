@@ -86,9 +86,9 @@ const setUser = (datos) => {
 
 const redirect = () =>{
     if(user.admin == true){
-        window.location.href = '../../productos.html';
+        window.location.href = './productos.html';
     }
     if(user.admin == false){
-        window.location.href = '../../index.html';
+        window.location.href = './index.html';
     }
 }

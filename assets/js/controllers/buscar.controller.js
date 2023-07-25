@@ -37,7 +37,7 @@ const displayResults = (resultado) => {
                 span.classList.add("result")
                 span.textContent = element.nombre;
                 span.addEventListener("click", ()=>{
-                    window.location.href = `../../producto-detalles.html?id=${element.id}`
+                    window.location.href = `./producto-detalles.html?id=${element.id}`
                 })
                 resultContent.appendChild(span)
             });

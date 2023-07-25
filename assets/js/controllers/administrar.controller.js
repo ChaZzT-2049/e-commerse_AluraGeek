@@ -59,5 +59,5 @@ let sesionStatus = localStorage.getItem('sesion');
 if(sesionStatus){
     getProducts();
 }else{
-    window.location.href = '../../login.html';
+    window.location.href = './login.html';
 }
