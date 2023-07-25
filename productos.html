@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek Agregar Producto</title>
+    <title>AluraGeek Nuestros Productos</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/agregar-producto.css">
+    <link rel="stylesheet" href="assets/css/todos-productos.css">
     <link rel="stylesheet" href="assets/css/rodapie-contacto.css">
     <link rel="stylesheet" href="assets/css/rodapie.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/agregar-producto.css">
 </head>
 <body>
     <header class="menu">
@@ -32,41 +34,17 @@
         </div>
         <div class="menu__nav">
             <a id="login__btn" class="btn__azul--outline" href="./login.html">Login</a>
-            <a class="btn__azul--outline" href="./productos.html">Productos</a>
+            <a class="btn__azul--outline" href="./index.html">Principal</a>
         </div>
     </header>
     <main>
-        <section class="agregar">
-            <h1 class="agregar__title">Agregar Nuevo Producto</h1>
-            <form action="./productos.html" class="agregar__form">
-                <div class="agregar__files">
-                    <fieldset class="agregar__field__drag">
-                        <label class="agregar__label" for="imgdrag"><i class="material-icons">image</i>Arrastra para agregar una imagen del producto.</label>
-                        <input type="file" class="agregar__img__drag" id="imgdrag" required>
-                    </fieldset>
-                    <fieldset class="agregar__field__buscar">
-                        <label for="imgbtn" class="agregar__label">O</label>
-                        <Button class="btn__azul--outline agregar__img__btn">Buscar archivo<input type="file" id="imgbtn" class="agregar__img__input" required></Button>
-                    </fieldset>
-                    <span class="error hide"></span>
-                </div>
-                <fieldset class="agregar__field">
-                    <label for="nombre" class="agregar__label">Nombre del producto</label>
-                    <input type="text" id="nombre" class="agregar__input" maxlength="20" placeholder="Nombre" required>
-                    <span class="error hide"></span>
-                </fieldset>
-                <fieldset class="agregar__field">
-                    <label for="precio" class="agregar__label">Precio del producto</label>
-                    <input type="number" id="precio" pattern="^[0-9]+$" class="agregar__input" required placeholder="Precio" step="0.01" min="0">
-                    <span class="error hide"></span>
-                </fieldset>
-                <fieldset class="agregar__field">
-                    <label for="descripcion" class="agregar__label">Descripción del producto</label>
-                    <textarea id="descripcion" class="agregar__textarea" required maxlength="150" placeholder="Descripción"></textarea>
-                    <span class="error hide"></span>
-                </fieldset>
-                <input id="agregar" type="submit" class="btn__azul" value="Agregar Producto">
-            </form>
+        <section class="productos__all">
+            <div class="productos__all__info">
+                <h1 class="productos__all__title">Todos los Productos</h1>
+                <a href="./agregar-producto.html" class="btn__azul" id="agregar">Agregar Producto</a>
+            </div>
+            <div class="productos__container">
+            </div>
         </section>
         <section class="rodapie__contacto">
             <div class="contacto">
@@ -105,8 +83,54 @@
             <i class="material-icons compartir__icon">share</i>
         </div>
     </footer>
+    <div class="modal__background" id="editar">
+        <div class="modal">
+            <h1 class="modal__title">Editar Producto <i id="cerrarEditar" class="material-icons">close</i></h1>
+            <form class="modal__form">
+                <div class="editar__img">
+                    <img class="img__editar" src="" alt="">
+                    <fieldset class="agregar__field">
+                        <label for="urlimg" class="agregar__label">Cambiar Imagen</label>
+                        <input type="file" id="urlimg" class="agregar__input">
+                        <span class="error hide"></span>
+                    </fieldset>
+                </div>
+                <fieldset class="agregar__field">
+                    <label for="nombre" class="agregar__label">Nuevo Nombre</label>
+                    <input type="text" id="nombre" class="agregar__input" placeholder="Nombre">
+                    <span class="error hide"></span>
+                </fieldset>
+                <fieldset class="agregar__field">
+                    <label for="precio" class="agregar__label">Nuevo Precio</label>
+                    <input required pattern="^[0-9]+$" type="number" id="precio" class="agregar__input" placeholder="Precio">
+                    <span class="error hide"></span>
+                </fieldset>
+                <fieldset class="agregar__field">
+                    <label for="descripcion" class="agregar__label">Nueva Descripción</label>
+                    <textarea required id="descripcion" placeholder="Descripción" class="agregar__textarea"></textarea>
+                    <span class="error hide"></span>
+                </fieldset>
+                <input type="submit" id="editarBtn" class="btn__azul" value="Editar Producto">
+            </form>
+        </div>
+    </div>
+    <div class="modal__background" id="eliminar">
+        <div class="modal">
+            <h1 class="modal__title">Eliminar Producto<i id="cerrarEliminar" class="material-icons">close</i></h1>
+            <span class="error">Estas Seguro que deseas eliminar el siguiente producto?<br><em class="emphasis">No se puede revertir esta acción</em></span>
+            <div class="producto__eliminar">
+                <img class="producto__eliminar__img" src="" alt="img producto">
+                <h2 class="producto__eliminar__nombre">Nombre del Producto</h2>
+                <b class="producto__eliminar__precio">Precio</b>
+                <p class="producto__eliminar__desc">Descripcion de producto</p>
+                <button id="btn__eliminar" class="btn__red">Eliminar Producto</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script type="module" src="assets/js/controllers/sesion.controller.js"></script>
-<script type="module" src="assets/js/controllers/agregar.controller.js"></script>
+<script type="module" src="assets/js/controllers/administrar.controller.js"></script>
+<script type="module" src="assets/js/controllers/editar.controller.js"></script>
+<script type="module" src="assets/js/controllers/eliminar.controller.js"></script>
 <script type="module" src="assets/js/controllers/buscar.controller.js"></script>

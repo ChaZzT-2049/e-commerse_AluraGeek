@@ -1,0 +1,87 @@
+.modal__background{
+    background: #0000006e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal{
+    z-index: 2;
+    width: 60%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 1rem;
+    background: var(--color-fondo-gris);
+    overflow-y: auto;
+}
+.modal__title{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-gris-titulo);
+    display: flex;
+    justify-content: space-between;
+}
+.modal__title i{
+    cursor: pointer;
+}
+.modal__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+.editar__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.img__editar{
+    width: 20%;
+}
+.emphasis{
+    font-style: italic;
+    font-weight: 600;
+}
+.emphasis::before, .emphasis::after{
+    content: "*";
+}
+#eliminar .modal{
+    height: auto;
+}
+.producto__eliminar{
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.producto__eliminar__nombre{
+    font-size: 1.5rem;
+}
+.producto__eliminar__precio{
+    font-weight: bold;
+}
+.producto__eliminar__precio::before{
+    content: "$ ";
+}
+.producto__eliminar__desc{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.btn__red{
+    align-self: stretch;
+    background-color: red;
+    padding: 1rem;
+    color: var(--color-fondo);
+}
+.btn__red:hover{
+    background-color: #b81717;
+}

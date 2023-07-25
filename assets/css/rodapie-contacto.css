@@ -75,3 +75,15 @@
     border-top: 0;
     border-radius: 0 0 5px 5px;
 }
+.error__contacto{
+    border-color: red;
+}
+.error__bg{
+    background: red;
+}
+.mensaje__error{
+    display: none;
+    color: var(--color-fondo);
+    align-self: center;
+    margin-bottom: .5rem;
+}

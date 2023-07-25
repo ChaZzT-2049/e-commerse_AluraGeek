@@ -20,153 +20,53 @@
     <header class="menu">
         <div class="menu__info">
             <img class="info__logo" src="assets/images/Logo.png" alt="">
-            <form class="info__buscar">
-                <input class="buscar__input" type="search" placeholder="Buscar Produto">
-                <i class="material-icons buscar__icon">search</i>
-            </form>
+            <div class="info__buscar">
+                <div class="buscar__producto">
+                    <input class="buscar__input" type="search" placeholder="Buscar Producto">
+                    <i class="material-icons buscar__icon" id="buscar__btn">search</i>
+                </div>
+                <div class="buscar__results">
+                    <div class="buscar__content"></div>
+                </div>
+            </div>
         </div>
         <div class="menu__nav">
-            <a class="btn__azul--outline" href="./login.html">Login</a>
+            <a id="login__btn" class="btn__azul--outline" href="./login.html">Login</a>
         </div>
     </header>
     <main>
         <section class="banner">
-            <h1 class="banner__titulo">Promoción de Julio</h1>
+            <h1 class="banner__titulo">Promociones de Julio</h1>
             <p class="banner__descripcion">Productos seleccionados con un 30% de descuento.</p>
-            <a href="#" class="btn__azul">Ver Descuentos</a>
+            <a href="#consolas" class="btn__azul">Ver Consolas</a>
         </section>
         <section class="productos">
             <h1 class="productos__title">Nuestros Productos</h1>
             <div class="categoria">
                 <div class="categoria__info">
                     <h2 class="categoria__title">Star Wars</h2>
-                    <a href="#" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
+                    <a href="./productos.html" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
                 </div>
-                <div class="categoria__productos">
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/taza-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/cabezas-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/yudo-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/clon-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/yoda-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/kylo-sw.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
+                <div class="categoria__productos" data-categoria="sw">
+                    
                 </div>
             </div>
-            <div class="categoria">
+            <div class="categoria" id="consolas">
                 <div class="categoria__info">
                     <h2 class="categoria__title">Consolas</h2>
-                    <a href="#" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
+                    <a href="./productos.html" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
                 </div>
-                <div class="categoria__productos">
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/control-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/ps5-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/nes-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/switch-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/sx-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/gameboy-cs.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
+                <div class="categoria__productos" data-categoria="cs">
+                    
                 </div>
             </div>
             <div class="categoria">
                 <div class="categoria__info">
                     <h2 class="categoria__title">Varios</h2>
-                    <a href="#" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
+                    <a href="./productos.html" class="categoria__enlace">Ver Todo<i class="material-icons">arrow_forward</i></a>
                 </div>
-                <div class="categoria__productos">
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/toall.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/camisa.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/sonic.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/control.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/vr.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
-                    <div class="producto">
-                        <img class="producto__img" src="assets/images/productos/botarga.png" alt="">
-                        <h3 class="producto__title">Titulo</h3>
-                        <b class="producto__precio">$precio.00</b>
-                        <a href="#" class="producto__enlace">Ver producto</a>
-                    </div>
+                <div class="categoria__productos" data-categoria="vr">
+                    
                 </div>
             </div>
         </section>
@@ -183,15 +83,17 @@
                         <li class="enlaces__item"><a href="#">Anúnciate Aquí</a></li>
                     </ul>
                 </div>
-                <form action="#" class="contacto__form">
+                <form class="contacto__form">
                     <legend class="contacto__title">Hable con nosotros</legend>
                     <div class="contacto__field">
-                        <label for="nombre" class="field__input__label">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" class="field__input" placeholder="Escribe tu nombre">
+                        <label for="contacto" class="field__input__label">Nombre</label>
+                        <input maxlength="40" type="text" name="nombre" id="contacto" class="field__input" placeholder="Escribe tu nombre">
+                        <span class="mensaje__error">No puede estar vacío</span>
                     </div>
                     <div class="contacto__field">
                         <label for="mensaje" class="field__input__label">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                        <textarea maxlength="120" name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                        <span class="mensaje__error">No puede estar vacío</span>
                     </div>
                     <button type="submit" class="btn__azul">Enviar Mensaje</button>
                 </form>
@@ -207,3 +109,6 @@
     </footer>
 </body>
 </html>
+<script type="module" src="assets/js/controllers/principal.controller.js"></script>
+<script type="module" src="assets/js/controllers/buscar.controller.js"></script>
+<script type="module" src="assets/js/controllers/contacto.controller.js"></script>

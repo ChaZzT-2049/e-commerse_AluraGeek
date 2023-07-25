@@ -20,28 +20,34 @@
     <header class="menu">
         <div class="menu__info">
             <img class="info__logo" src="assets/images/Logo.png" alt="">
-            <form class="info__buscar">
-                <input class="buscar__input" type="search" placeholder="Buscar Produto">
-                <i class="material-icons buscar__icon">search</i>
-            </form>
+            <div class="info__buscar">
+                <div class="buscar__producto">
+                    <input class="buscar__input" type="search" placeholder="Buscar Producto">
+                    <i class="material-icons buscar__icon" id="buscar__btn">search</i>
+                </div>
+                <div class="buscar__results">
+                    <div class="buscar__content"></div>
+                </div>
+            </div>
         </div>
         <div class="menu__nav">
-            <a class="btn__azul--outline" href="./index.html">Principal</a>
+            <a class="btn__azul--outline" href="./index.html">principal</a>
         </div>
     </header>
     <main>
         <section class="login">
-            <h1 class="login__title">Inicio de Sesión</h1>
-            <form action="#" class="login__form">
+            <h1 class="login__title">Inicio de Sesión <div class="help__container"><i class="material-icons help__icon">help</i><div class="help">Correo de prueba: <br> example@alura.com <br>C: Ex4mp1ePass</div></div></h1>
+            <div class="errors"></div>
+            <form class="login__form">
                 <div class="login__field">
-                    <label for="correo" class="login__label">Correo Electronico</label>
-                    <input type="email" id="correo" placeholder="Escribe tu Correo" class="login__input">
+                    <label for="correo" class="login__label" data-label="correo">Correo Electronico</label>
+                    <input type="email" id="correo" placeholder="Escribe tu Correo" class="login__input" required>
                 </div>
                 <div class="login__field">
-                    <label for="contraseña" class="login__label">Contraseña</label>
-                    <input type="password" id="contraseña" placeholder="Escribe tu Contraseña" class="login__input">
+                    <label for="contraseña" class="login__label" data-label="contra">Contraseña</label>
+                    <input type="password" id="contraseña" placeholder="Escribe tu Contraseña" class="login__input" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$">
                 </div>
-                <input type="submit" class="btn__azul" value="Entrar">
+                <button type="submit" id="enviar" class="btn__azul">Entrar</button>
             </form>
         </section>
         <section class="rodapie__contacto">
@@ -57,15 +63,17 @@
                         <li class="enlaces__item"><a href="#">Anúnciate Aquí</a></li>
                     </ul>
                 </div>
-                <form action="#" class="contacto__form">
+                <form class="contacto__form">
                     <legend class="contacto__title">Hable con nosotros</legend>
                     <div class="contacto__field">
-                        <label for="nombre" class="field__input__label">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" class="field__input" placeholder="Escribe tu nombre">
+                        <label for="contacto" class="field__input__label">Nombre</label>
+                        <input maxlength="40" type="text" name="nombre" id="contacto" class="field__input" placeholder="Escribe tu nombre">
+                        <span class="mensaje__error">No puede estar vacío</span>
                     </div>
                     <div class="contacto__field">
                         <label for="mensaje" class="field__input__label">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                        <textarea maxlength="120" name="mensaje" id="mensaje" class="field__textarea" placeholder="Deja tu mensaje"></textarea>
+                        <span class="mensaje__error">No puede estar vacío</span>
                     </div>
                     <button type="submit" class="btn__azul">Enviar Mensaje</button>
                 </form>
@@ -81,3 +89,5 @@
     </footer>
 </body>
 </html>
+<script type="module" src="assets/js/controllers/login.controller.js"></script>
+<script type="module" src="assets/js/controllers/buscar.controller.js"></script>

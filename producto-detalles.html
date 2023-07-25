@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek Agregar Producto</title>
+    <title>AluraGeek Detalles</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,61 +12,53 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/agregar-producto.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/detalles.css">
     <link rel="stylesheet" href="assets/css/rodapie-contacto.css">
     <link rel="stylesheet" href="assets/css/rodapie.css">
 </head>
 <body>
-    <header class="menu">
-        <div class="menu__info">
-            <img class="info__logo" src="assets/images/Logo.png" alt="">
-            <div class="info__buscar">
-                <div class="buscar__producto">
-                    <input class="buscar__input" type="search" placeholder="Buscar Producto">
-                    <i class="material-icons buscar__icon" id="buscar__btn">search</i>
-                </div>
-                <div class="buscar__results">
-                    <div class="buscar__content"></div>
+    <main>
+        <header class="menu">
+            <div class="menu__info">
+                <img class="info__logo" src="assets/images/Logo.png" alt="">
+                <div class="info__buscar">
+                    <div class="buscar__producto">
+                        <input class="buscar__input" type="search" placeholder="Buscar Producto">
+                        <i class="material-icons buscar__icon" id="buscar__btn">search</i>
+                    </div>
+                    <div class="buscar__results">
+                        <div class="buscar__content"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="menu__nav">
-            <a id="login__btn" class="btn__azul--outline" href="./login.html">Login</a>
-            <a class="btn__azul--outline" href="./productos.html">Productos</a>
-        </div>
-    </header>
-    <main>
-        <section class="agregar">
-            <h1 class="agregar__title">Agregar Nuevo Producto</h1>
-            <form action="./productos.html" class="agregar__form">
-                <div class="agregar__files">
-                    <fieldset class="agregar__field__drag">
-                        <label class="agregar__label" for="imgdrag"><i class="material-icons">image</i>Arrastra para agregar una imagen del producto.</label>
-                        <input type="file" class="agregar__img__drag" id="imgdrag" required>
-                    </fieldset>
-                    <fieldset class="agregar__field__buscar">
-                        <label for="imgbtn" class="agregar__label">O</label>
-                        <Button class="btn__azul--outline agregar__img__btn">Buscar archivo<input type="file" id="imgbtn" class="agregar__img__input" required></Button>
-                    </fieldset>
-                    <span class="error hide"></span>
+            <div class="menu__nav">
+                <a id="login__btn" class="btn__azul--outline" href="./login.html">Login</a>
+                <a class="btn__azul--outline" href="./index.html">principal</a>
+            </div>
+        </header>
+        <section class="detalles">
+            <h2 class="detalles__title">Detalles de Producto</h2>
+            <div class="detalles__producto">
+                <div class="producto__img">
+                    <img data-img src="" alt="">
                 </div>
-                <fieldset class="agregar__field">
-                    <label for="nombre" class="agregar__label">Nombre del producto</label>
-                    <input type="text" id="nombre" class="agregar__input" maxlength="20" placeholder="Nombre" required>
-                    <span class="error hide"></span>
-                </fieldset>
-                <fieldset class="agregar__field">
-                    <label for="precio" class="agregar__label">Precio del producto</label>
-                    <input type="number" id="precio" pattern="^[0-9]+$" class="agregar__input" required placeholder="Precio" step="0.01" min="0">
-                    <span class="error hide"></span>
-                </fieldset>
-                <fieldset class="agregar__field">
-                    <label for="descripcion" class="agregar__label">Descripción del producto</label>
-                    <textarea id="descripcion" class="agregar__textarea" required maxlength="150" placeholder="Descripción"></textarea>
-                    <span class="error hide"></span>
-                </fieldset>
-                <input id="agregar" type="submit" class="btn__azul" value="Agregar Producto">
-            </form>
+                <div class="producto__info">
+                    <h1 data-nombre class="info__title"></h1>
+                    <b data-precio class="info__precio"></b>
+                    <p data-desc class="info__descripcion"></p>
+                </div>
+            </div>
+            <div class="similares">
+                <h3 class="similares__title">Productos Similares</h3>
+                <div class="similares__productos">
+                </div>
+            </div>
+        </section>
+        <section class="detalles__error">
+            <h1 class="info__title">¡Hubo algun error!</h1>
+            <span>Parece que el producto que estas buscando no existe o no se encuentra disponible, intenta más tarde.</span>
+            <a href="./index.html" class="btn__azul">Ver otros Productos</a>
         </section>
         <section class="rodapie__contacto">
             <div class="contacto">
@@ -108,5 +100,5 @@
 </body>
 </html>
 <script type="module" src="assets/js/controllers/sesion.controller.js"></script>
-<script type="module" src="assets/js/controllers/agregar.controller.js"></script>
 <script type="module" src="assets/js/controllers/buscar.controller.js"></script>
+<script type="module" src="assets/js/controllers/detalles.controller.js"></script>

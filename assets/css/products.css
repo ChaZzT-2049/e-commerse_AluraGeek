@@ -65,6 +65,9 @@
     font-size: 1rem;
     font-weight: 700;
 }
+.producto__precio::before{
+    content: "$ ";
+}
 .producto__enlace{
     color: var(--color-azul);
     font-weight: 700;
