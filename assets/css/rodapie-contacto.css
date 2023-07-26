@@ -87,3 +87,18 @@
     align-self: center;
     margin-bottom: .5rem;
 }
+
+@media screen and (max-width: 480px) {
+    .rodapie__contacto{
+        padding: 1rem;
+    }
+    .contacto{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .contacto__about{
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

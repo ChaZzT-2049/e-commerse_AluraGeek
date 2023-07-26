@@ -23,3 +23,12 @@
 .compartir__icon:hover{
     color: var(--color-azul);
 }
+
+@media screen and (max-width: 480px) {
+    .rodapie{
+        padding: 1rem;
+    }
+    .rodapie__titulo{
+        font-size: 1rem;
+    }
+}

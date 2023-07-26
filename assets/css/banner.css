@@ -33,6 +33,7 @@
     }
     .banner__titulo{
         font-size: 2rem;
+        text-shadow: 1px 1px 1px #000;
     }
     .banner__descripcion{
         font-size: 1rem;

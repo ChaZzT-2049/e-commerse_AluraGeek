@@ -77,12 +77,16 @@
 
 @media screen and (max-width: 480px) {
     .productos{
-        padding: 1rem;
+        padding: 1rem .5rem;
+        gap: 1rem;
     }
     .productos__title{
         font-size: 1.5rem;
     }
     .categoria__productos{
         overflow-x: scroll;
+    }
+    .categoria{
+        padding-bottom: 1rem;
     }
 }
