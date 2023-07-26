@@ -67,3 +67,19 @@
 .producto__id::before{
     content: "#";
 }
+
+@media screen and (max-width: 480px) {
+    .productos__all{
+        padding: 1rem;
+    }
+    .productos__all__info{
+        gap: 1rem;
+    }
+    .productos__all__title{
+        font-size: 1.3rem;
+    }
+    #agregar{
+        padding: .5rem;
+        text-align: center;
+    }
+}

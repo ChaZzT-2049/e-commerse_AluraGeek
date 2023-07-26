@@ -90,15 +90,14 @@
 @media screen and (max-width: 480px) {
     .menu{
         padding: .5rem;
-        justify-content: space-between;
-        align-items: flex-end;
         gap: .5rem;
+        flex-direction: column;
     }
     .menu__info{
         flex-direction: column;
         align-items: flex-start;
         gap: .5rem;
-        flex-grow: 1;
+        width: 100%;
     }
     .btn__azul--outline{
         padding: .5rem;
@@ -112,5 +111,8 @@
     .buscar__producto{
         padding: .5rem;
         flex-grow: 1;
+    }
+    .menu__nav{
+        align-self: flex-end;
     }
 }
