@@ -86,3 +86,31 @@
     flex-direction: column;
     flex-grow: 1;
 }
+
+@media screen and (max-width: 480px) {
+    .menu{
+        padding: .5rem;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: .5rem;
+    }
+    .menu__info{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        flex-grow: 1;
+    }
+    .btn__azul--outline{
+        padding: .5rem;
+    }
+    .info__logo{
+        height: 1.5rem;
+    }
+    .info__buscar{
+        width: 100%;
+    }
+    .buscar__producto{
+        padding: .5rem;
+        flex-grow: 1;
+    }
+}
