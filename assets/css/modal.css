@@ -85,3 +85,27 @@
 .btn__red:hover{
     background-color: #b81717;
 }
+
+@media screen and (max-width: 480px) {
+    .modal{
+        width: 90%;
+    }
+    .editar__img{
+        flex-direction: column;
+
+    }
+    .img__editar{
+        width: 50%;
+    }
+    .modal__form{
+        padding: .5rem;
+        gap: 1rem;
+    }
+    #urlimg{
+        width: 90%;
+    }
+    .producto__eliminar{
+        gap: 1rem;
+        padding: 1rem;
+    }
+}

@@ -97,3 +97,18 @@
 .hide{
     display: none;
 }
+
+@media screen and (max-width: 480px) {
+    .agregar{
+        padding: 1rem;
+    }
+    .agregar__title{
+        font-size: 1.3rem;
+    }
+    .agregar__form{
+        width: 100%;
+    }
+    .agregar__files{
+        flex-direction: column;
+    }
+}

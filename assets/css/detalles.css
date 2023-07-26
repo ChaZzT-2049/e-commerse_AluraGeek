@@ -67,3 +67,40 @@
     padding: 2rem 4rem;
     gap: 2rem;
 }
+
+@media screen and (max-width: 480px) {
+    .detalles{
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .detalles__title{
+        font-size: 1.3rem;
+    }
+    .detalles__producto{
+        flex-direction: column;
+    }
+    .producto__img{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .producto__img img{
+        width: 80%;
+    }
+    .producto__info{
+        width: 100%;
+    }
+    .info__title{
+        font-size: 1.5rem;
+    }
+    .similares{
+        gap: .5rem;
+    }
+    .similares__productos{
+        flex-wrap: wrap;
+        gap: .5rem;
+        justify-content: space-between;
+    }
+    .detalles__error{
+        padding: 1rem;
+    }
+}

@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 .producto{
@@ -46,11 +46,7 @@
     color: var(--color-azul-hover);
 }
 .icon__eliminar:hover{
-    cursor: pointer;
     color: #c40d0d;
-}
-.producto__img:first-child + i{
-    margin-right: 3rem;
 }
 .producto__nombre{
     font-size: 1.2rem;
@@ -71,6 +67,7 @@
 @media screen and (max-width: 480px) {
     .productos__all{
         padding: 1rem;
+        gap: 1rem;
     }
     .productos__all__info{
         gap: 1rem;
@@ -81,5 +78,11 @@
     #agregar{
         padding: .5rem;
         text-align: center;
+    }
+    .producto{
+        margin-bottom: 0;
+    }
+    .icons__container{
+        align-self: center;
     }
 }

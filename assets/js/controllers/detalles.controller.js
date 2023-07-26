@@ -47,7 +47,7 @@ const setSimilares = (producto) =>{
     const div = document.createElement("div");
     div.classList.add("producto");
     const content = `
-        <img src="${producto.urlimg}" alt="" class="producto__img">
+        <img src="${producto.urlimg}" alt="" class="similar__producto__img">
         <h4 class="producto__title">${producto.nombre}</h4>
         <b class="producto__precio">${producto.precio}</b>
         <a href="./producto-detalles.html?id=${producto.id}" class="producto__enlace">Ver Producto</a>
