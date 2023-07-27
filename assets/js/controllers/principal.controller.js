@@ -6,16 +6,30 @@ function loadProducts(){
     const cs = document.querySelector("[data-categoria=cs]")
     const vr = document.querySelector("[data-categoria=vr]")
     services.productos().then((data) => {
+        let prodSw = []
+        let prodCs = []
+        let prodVr = []
         data.forEach(producto => {
-            const card = displayProduct(producto);
             if(producto.categoria == sw.dataset.categoria){
-                sw.appendChild(card);
+                prodSw.push(producto)
             }if(producto.categoria == cs.dataset.categoria){
-                cs.appendChild(card);
+                prodCs.push(producto)
             }if(producto.categoria == vr.dataset.categoria){
-                vr.appendChild(card);
+                prodVr.push(producto)
             }
         });
+        prodSw.slice(0,4).forEach(prod => {
+            const card = displayProduct(prod);
+            sw.appendChild(card);
+        })
+        prodCs.forEach(prod => {
+            const card = displayProduct(prod);
+            cs.appendChild(card);
+        })
+        prodVr.forEach(prod => {
+            const card = displayProduct(prod);
+            vr.appendChild(card);
+        })
     }).catch((error) => console.log(error));
 }
 

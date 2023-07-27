@@ -98,7 +98,7 @@
     display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     .agregar{
         padding: 1rem;
     }
@@ -110,5 +110,17 @@
     }
     .agregar__files{
         flex-direction: column;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 761px) {
+    .agregar{
+        padding: 2rem 1rem;
+    }
+    .agregar__title{
+        font-size: 1.5rem;
+        align-self: flex-start;
+    }
+    .agregar__form{
+        width: 100%;
     }
 }

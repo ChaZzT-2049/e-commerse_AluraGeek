@@ -32,7 +32,7 @@ const displayResults = (resultado) => {
             resultContent.textContent = " No hay Resultados"
             resultContent.parentElement.style.display = "flex";
         }else{
-            resultado.forEach(element => {
+            resultado.slice(0, 6).forEach(element => {
                 const span = document.createElement("span");
                 span.classList.add("result")
                 span.textContent = element.nombre;

@@ -23,13 +23,11 @@ const setEliminarContent = (producto) => {
     const img = document.querySelector(".producto__eliminar__img");
     const nombre = document.querySelector(".producto__eliminar__nombre");
     const precio = document.querySelector(".producto__eliminar__precio");
-    const desc = document.querySelector(".producto__eliminar__desc");
     const btnEliminar = document.querySelector("#btn__eliminar");
 
     img.src = producto.urlimg;
     nombre.textContent = producto.nombre;
     precio.textContent = producto.precio;
-    desc.textContent = producto.descripcion;
 
     btnEliminar.addEventListener("click", () =>{
         services.deleteProduct(producto.id).then(() =>{

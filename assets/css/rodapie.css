@@ -24,7 +24,15 @@
     color: var(--color-azul);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .rodapie{
+        padding: 1rem;
+    }
+    .rodapie__titulo{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 761px) {
     .rodapie{
         padding: 1rem;
     }

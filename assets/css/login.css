@@ -77,7 +77,7 @@ input.btn__azul{
     font-size: 1rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     .login{
         padding: 1rem;
         gap: 1rem;
@@ -87,6 +87,7 @@ input.btn__azul{
     }
     .login__title{
         flex-direction: column;
+        font-size: 1.5rem;
     }
     .help__icon:hover ~ .help{
         z-index: 1;
@@ -94,5 +95,21 @@ input.btn__azul{
         position: absolute;
         top: -10px;
         right: -180px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 761px) {
+    .login{
+        padding: 2rem;
+        gap: 1rem;
+    }
+    .login__form{
+        width: 80%;
+    }
+    .login__title{
+        font-size: 1.5rem;
+    }
+    .help__icon:hover ~ .help{
+        top: 20px;
+        right: -160px;
     }
 }

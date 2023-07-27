@@ -56,7 +56,7 @@
     transition: all 300ms ease-in-out;
 }
 .user{
-    padding: .5rem;
+    text-decoration: underline;
 }
 .buscar__results{
     z-index: 1;
@@ -87,7 +87,7 @@
     flex-grow: 1;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
     .menu{
         padding: .5rem;
         gap: .5rem;
@@ -114,5 +114,37 @@
     }
     .menu__nav{
         align-self: flex-end;
+    }
+    .cerrarSesion{
+        padding: .1rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .menu{
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .info__logo{
+        height: 2rem;
+    }
+    .menu__info{
+        gap: .5rem;
+        align-self: flex-start;
+        width: 100%;
+    }
+    .btn__azul--outline{
+        padding: .5rem 1rem;
+    }
+    .user{
+        font-size: .8rem;
+    }
+    .menu__nav{
+        gap: .5rem;
+        align-self: flex-end;
+    }
+    .cerrarSesion{
+        padding: .1rem;
     }
 }

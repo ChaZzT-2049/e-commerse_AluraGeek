@@ -19,9 +19,7 @@ const add = () => {
 function getProducts(){
     add();
     const container = document.querySelector(".productos__container")
-    container.innerHTML = "";
     services.productos().then((data) => {
-        container.innerHTML = "";
         data.forEach(producto => {
             const card = addProduct(producto);
             container.appendChild(card);

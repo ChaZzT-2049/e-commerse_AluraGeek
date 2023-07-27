@@ -36,7 +36,7 @@ const getDetalles = async() =>{
 }
 const getSimilares = async(categoria, id) =>{
     const productos = await services.productos();
-    productos.forEach(producto => {
+    productos.slice(0, 5).forEach(producto => {
         if(producto.categoria === categoria && producto.id != id){
             setSimilares(producto);
         }
