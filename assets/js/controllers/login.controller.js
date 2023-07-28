@@ -80,7 +80,10 @@ const setUser = (datos) => {
         sesion = true;
         localStorage.setItem('sesion', sesion);
         localStorage.setItem("user", JSON.stringify(user))
-        redirect();
+        if(!document.startViewTransition){
+            redirect();
+        }
+        document.startViewTransition(() => redirect())
     }
 }
 

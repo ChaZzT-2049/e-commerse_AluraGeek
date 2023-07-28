@@ -19,6 +19,7 @@ btnBuscar.addEventListener("click", ()=> {
     if(buscarInput.value != ""){
         services.searchProduct(buscarInput.value).then((data)=>{
             displayResults(data)
+            //document.startViewTransition(() => displayResults(data))
         }).catch(error => { console.log(error)})
     }
 });

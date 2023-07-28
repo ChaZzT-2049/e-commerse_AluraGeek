@@ -1,3 +1,35 @@
+
+::view-transition-old(productosSw), 
+::view-transition-new(productosSw),
+::view-transition-old(productosCs), 
+::view-transition-new(productosCs)
+::view-transition-old(productosVr), 
+::view-transition-new(productosVr){
+    animation-duration: 1.5s;
+}
+
+::view-transition-old(productosSw), ::view-transition-old(productosCS), ::view-transition-old(productosVr){
+    animation-name: scaleIn;
+}
+::view-transition-new(productosSw), ::view-transition-new(productosCS), ::view-transition-old(productosVr){
+    animation-name: scaleOut;
+}
+@keyframes scaleIn {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes scaleOut {
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
+}
 .productos{
     padding: 2rem 4rem;
     display: flex;
@@ -40,6 +72,15 @@
     justify-content: space-evenly;
     gap: 1rem;
 }
+[data-categoria="sw"]{
+    view-transition-name: productosSw;
+}
+[data-categoria="cs"]{
+    view-transition-name: productosCs;
+}
+[data-categoria="vr"]{
+    view-transition-name: productosVr;
+}
 .producto{
     display: flex;
     flex-direction: column;
@@ -74,7 +115,12 @@
     font-size: 1rem;
     padding: .5rem 0;
 }
-
+.loader{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--color-azul);
+}
 @media screen and (max-width: 480px) {
     .productos{
         padding: 1rem .5rem;
@@ -84,6 +130,7 @@
         font-size: 1.5rem;
     }
     .categoria__productos{
+        justify-content: flex-start;
         overflow-x: scroll;
     }
     .categoria{

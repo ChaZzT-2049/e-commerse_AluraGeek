@@ -3,8 +3,11 @@ import { controlMenu } from "./sesion.controller.js";
 controlMenu
 function loadProducts(){
     const sw = document.querySelector("[data-categoria=sw]")
+    sw.innerHTML = "";
     const cs = document.querySelector("[data-categoria=cs]")
+    cs.innerHTML = "";
     const vr = document.querySelector("[data-categoria=vr]")
+    vr.innerHTML = "";
     services.productos().then((data) => {
         let prodSw = []
         let prodCs = []
@@ -22,11 +25,11 @@ function loadProducts(){
             const card = displayProduct(prod);
             sw.appendChild(card);
         })
-        prodCs.forEach(prod => {
+        prodCs.slice(0,4).forEach(prod => {
             const card = displayProduct(prod);
             cs.appendChild(card);
         })
-        prodVr.forEach(prod => {
+        prodVr.slice(0,4).forEach(prod => {
             const card = displayProduct(prod);
             vr.appendChild(card);
         })
@@ -45,4 +48,7 @@ const displayProduct = (producto) => {
     div.innerHTML = content;
     return div;
 }
-loadProducts();
+if(!document.startViewTransition){
+    loadProducts();
+}
+document.startViewTransition(() => loadProducts())

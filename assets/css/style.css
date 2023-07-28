@@ -1,14 +1,36 @@
 :root{
-   --color-fondo: #FDFDFD;
-   --color-fondo-gris: #F5F5F5;
-   --color-de-texto-gris: #A2A2A2;
-   --color-azul: #2A7AE4;
-   --color-azul-fondo: #D4E4FA;
-   --color-azul-hover: #5595E9;
-   --color-gris-titulo: #464646;
-   --color-azul-claro-fondo: #EAF2FD;
-}
-
+    --color-fondo: #FDFDFD;
+    --color-fondo-gris: #F5F5F5;
+    --color-de-texto-gris: #A2A2A2;
+    --color-azul: #2A7AE4;
+    --color-azul-fondo: #D4E4FA;
+    --color-azul-hover: #5595E9;
+    --color-gris-titulo: #464646;
+    --color-azul-claro-fondo: #EAF2FD;
+ }
+ ::view-transition-old(root), ::view-transition-new(root){
+     animation-duration: 1.2seg;
+ }
+ ::view-transition-old(root){
+     animation-name: slideOut;
+ }
+ ::view-transition-new(root){
+     animation-name: slideIn;
+ }
+ @keyframes slideOut {
+     from{
+         transform: translateX(0);
+     }to{
+         transform: translateX(100%);
+     }
+ }
+ @keyframes slideIn {
+     from{
+         transform: translateX(100%);
+     }to{
+         transform: translateX(0);
+     }
+ }
 body {
     box-sizing: border-box;
     background-color: var(--color-fondo) ;
